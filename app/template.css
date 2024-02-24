@@ -9,10 +9,16 @@
     position: relative;
     box-shadow: 0;
     overflow: hidden;
-    border: 0;
     transition: 0.5s;
     display: block;
     padding: 10px 15px;
+    color: #101D30;
+    font-size: 14px
+}
+.button-primary:hover {
+    background: transparent;
+    border: 1px solid #4DB5FF;
+    color: #4DB5FF;
 }
 .bg-color-button-outline {
     background: transparent;

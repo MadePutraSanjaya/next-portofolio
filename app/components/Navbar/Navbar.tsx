@@ -21,16 +21,23 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  
   return (
-    <Disclosure as="nav" className="bg-color absolute right-0 left-0 top-0">
+    <Disclosure as="nav" className="bg-color fixed right-0 left-0 top-0 " style={NavbarTop}>
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-9 sm:px-6 lg:px-8">
-            <div className="relative flex justify-between h-16 items-center">
+          <div className="px-9 sm:px-6 lg:px-8 border-b border-gray-800">
+            <div
+              className="relative flex justify-between h-16 items-center"
+              style={{ padding: "50px 0" }}
+            >
               <div className="flex-shrink-0 flex items-center">
                 {/* Logo */}
-                <Image className="h-8 w-auto" src={Logo} alt="Your Company" />
+                <Image
+                  width={60}
+                  height={500}
+                  src={Logo}
+                  alt="Made Sanjaya's Logo"
+                />
               </div>
 
               {/* Mobile menu button */}
@@ -51,7 +58,7 @@ const Navbar = () => {
 
               {/* Button */}
               <div className="hidden ml-auto md:block">
-                <button className="text-white button-primary">tes item</button>
+                <button className="text-white button-primary">Hire Me</button>
               </div>
             </div>
           </div>
@@ -59,12 +66,12 @@ const Navbar = () => {
           {/* Mobile menu */}
           <Transition
             show={open}
-                enter="transition-opacity duration-200"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-200"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
+            enter="transition-opacity duration-200"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
           >
             <Disclosure.Panel className="md:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
@@ -94,3 +101,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+const NavbarTop: React.CSSProperties = {
+  boxShadow: "0 5px 29px -8px rgb(0 0 0 / 19%)"
+}
