@@ -1,6 +1,9 @@
 .bg-color{
     background: #101D30;
 }
+.bg-info {
+    background: #1B2B43
+}
 .button-primary {
     background: #4DB5FF;
     border: transparent;
@@ -20,9 +23,24 @@
     border: 1px solid #4DB5FF;
     color: #4DB5FF;
 }
-.bg-color-button-outline {
+.button-primary-outline {
     background: transparent;
     border: 1px solid #4DB5FF;
+    font-weight: 600;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    display: block;
+    padding: 10px 15px;
+    color: #4DB5FF;
+    font-size: 14px
+}
+.button-primary-outline:hover {
+    background: #4DB5FF;
+    color: #101D30;
+    border: transparent;
 }
 .bg-section {
     background: #1B2B43;

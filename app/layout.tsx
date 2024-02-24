@@ -22,10 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-color">
-      <Navbar />
+      <body className="bg-color container mx-auto px-4">
+        <Navbar />
         {children}
-        </body>
+      </body>
     </html>
   );
 }
