@@ -1,0 +1,23 @@
+.bg-color{
+    background: #101D30;
+}
+.button-primary {
+    background: #4DB5FF;
+    border: transparent;
+    font-weight: 600;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0;
+    overflow: hidden;
+    border: 0;
+    transition: 0.5s;
+    display: block;
+    padding: 10px 15px;
+}
+.bg-color-button-outline {
+    background: transparent;
+    border: 1px solid #4DB5FF;
+}
+.bg-section {
+    background: #1B2B43;
+}
