@@ -4,6 +4,10 @@
 .bg-info {
     background: #1B2B43
 }
+.bg-info:hover {
+    background: transparent;
+    border: 1px solid #4DB5FF;
+}
 .button-primary {
     background: #4DB5FF;
     border: transparent;

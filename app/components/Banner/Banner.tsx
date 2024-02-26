@@ -5,6 +5,9 @@ import Image from "next/image";
 import Profile from "/public/profile.png";
 import CTA from '../CTA/CTA';
 import CardInfo from '../Cards/CardInfo/CardInfo';
+import Instagram from '/public/instagram.png'
+import Linkedin from '/public/linkedin.png'
+import Github from '/public/github.png'
 
 const Banner: React.FC = () => {
   return (
@@ -33,9 +36,26 @@ const Banner: React.FC = () => {
         </div>
       </div>
 
-        <div className="flex flex-row gap-4">
-          <CardInfo />
-        </div>
+      <div className="flex gap-9 justify-center">
+        <CardInfo
+          title="Github"
+          subTitle="See My Work"
+          img_url={Github}
+          href="https://github.com/MadePutraSanjaya"
+        />
+        <CardInfo
+          title="Linkedin"
+          subTitle="See My Work"
+          img_url={Linkedin}
+          href="https://www.linkedin.com/in/madesanjaya/"
+        />
+        <CardInfo
+          title="Instagram"
+          subTitle="Contact Me"
+          img_url={Instagram}
+          href="https://www.instagram.com/mdsanjaya._/"
+        />
+      </div>
     </>
   );
 }
