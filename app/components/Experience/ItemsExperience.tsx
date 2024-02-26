@@ -1,5 +1,5 @@
 import React from "react";
-import DataExperience from "../data/experience.json";
+import DataExperience from "../../data/experience.json";
 import { CheckBadgeIcon } from "@heroicons/react/24/outline";
 
 const FrontEnd = () => {

@@ -1,7 +1,8 @@
 import React from 'react'
 import Banner from './components/Banner/Banner';
-import About from './about/About';
-import Experience from './experience/Experience';
+import About from './components/About/About';
+import Experience from './components/Experience/Experience';
+import Resume from './components/Resume/Resume';
 
 const Page = () => {
   return (
@@ -9,6 +10,7 @@ const Page = () => {
      <Banner />
      <About/>
      <Experience /> 
+     <Resume />
     </>
   )
 }

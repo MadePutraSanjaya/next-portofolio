@@ -13,14 +13,14 @@ const Experience = () => {
           </p>
         </div>
         <div className="columns-2">
-          <div className="bg-bgSection hover:bg-bgTransparent bgBorder transition ease-in-out rounded-xl">
+          <div className="bg-bgSection hover:bg-bgTransparent bgBorder transition ease-in-out delay-150 rounded-xl">
             <div className="front-end p-9 ">
               <p className="font-bold text-center">Front End Development</p>
                 <FrontEnd />
               </div>
           </div>
 
-          <div className="bg-bgSection hover:bg-bgTransparent bgBorder transition ease-in-out rounded-xl">
+          <div className="bg-bgSection hover:bg-bgTransparent bgBorder transition ease-in-out delay-150 rounded-xl">
             <div className="back-end p-9 ">
               <p className="font-bold text-center">Back End Development</p>
               <BackEnd />
