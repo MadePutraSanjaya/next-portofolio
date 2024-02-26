@@ -9,7 +9,7 @@ import NavItems from "./NavItems";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
+  { name: "About", href: "#about", current: false },
   { name: "Experience", href: "#", current: false },
   { name: "Resume", href: "#", current: false },
   { name: "Services", href: "#", current: false },
@@ -22,7 +22,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-color fixed right-0 left-0 top-0 " style={NavbarTop}>
+    <Disclosure as="nav" className="bg-bgColor fixed right-0 left-0 top-0 z-50" style={NavbarTop}>
       {({ open }) => (
         <>
           <div className="px-9 sm:px-6 lg:px-8 border-b border-gray-800">

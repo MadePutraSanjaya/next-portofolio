@@ -9,13 +9,13 @@ function classNames(...classes) {
 
 const NavItems = () => {
   const navigation = [
-    { name: "Home", href: "#", current: true },
-    { name: "About", href: "#", current: false },
-    { name: "Experience", href: "#", current: false },
-    { name: "Resume", href: "#", current: false },
-    { name: "Services", href: "#", current: false },
-    { name: "Portofolio", href: "#", current: false },
-  ];
+  { name: "Home", href: "#", current: true },
+  { name: "About", href: "#about", current: false },
+  { name: "Experience", href: "#", current: false },
+  { name: "Resume", href: "#", current: false },
+  { name: "Services", href: "#", current: false },
+  { name: "Portofolio", href: "#", current: false },
+];
 
   return (
     <>

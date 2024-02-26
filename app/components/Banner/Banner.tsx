@@ -12,7 +12,7 @@ import Github from '/public/github.png'
 const Banner: React.FC = () => {
   return (
     <>
-      <div className="columns-2">
+      <div className="columns-2 mx-auto container px-4">
         <div className="text-banner relative top-32 lg:top-40">
           <h1 className="text-3xl font-semibold mb-4 w-4/5">
             Hello, I’m Made Sanjaya Front End Developer Based In Bali{" "}
@@ -23,7 +23,7 @@ const Banner: React.FC = () => {
           </p>
           <div className="flex flex-row mt-9 gap-4">
             <div className="">
-              <CTA className="button-primary">Hire Me</CTA>
+              <CTA className="button-primary" style={ButtonPrimary}>Hire Me</CTA>
             </div>
             <div className="">
               <CTA className="button-primary-outline">Download CV</CTA>
@@ -36,7 +36,7 @@ const Banner: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex gap-9 justify-center">
+      <div className="flex gap-9 justify-center mb-20">
         <CardInfo
           title="Github"
           subTitle="See My Work"
@@ -62,3 +62,17 @@ const Banner: React.FC = () => {
 
 export default Banner
 
+const ButtonPrimary: React.CSSProperties = {
+  background: "#4DB5FF",
+  border: "transparent",
+  fontWeight: "600",
+  borderRadius: "8px",
+  position: "relative",
+  boxShadow: "0",
+  overflow: "hidden",
+  transition: "0.5s",
+  display: "block",
+  padding: "10px 15px",
+  color: "#101D30",
+  fontSize: "14px",
+};

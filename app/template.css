@@ -1,30 +1,12 @@
-.bg-color{
-    background: #101D30;
-}
-.bg-info {
+.border-blue {
     background: #1B2B43
 }
-
-.bg-info:hover {
-    background: transparent;
+.bgBorder:hover {
     border: 1px solid #4DB5FF;
 }
-.button-primary {
-    background: #4DB5FF;
-    border: transparent;
-    font-weight: 600;
-    border-radius: 8px;
-    position: relative;
-    box-shadow: 0;
-    overflow: hidden;
-    transition: 0.5s;
-    display: block;
-    padding: 10px 15px;
-    color: #101D30;
-    font-size: 14px
-}
+
 .button-primary:hover {
-    background: #308ACB;
+    background: #308ACB !important;
 }
 .button-primary-outline {
     background: transparent;
@@ -45,6 +27,19 @@
     color: #101D30;
     border: transparent;
 }
-.bg-section {
-    background: #1B2B43;
+.section{
+    padding: 80px 0
+}
+
+@media (max-width: 991.5px){
+    .section {
+        padding: 60px 0 !important;
+    }
+}
+
+@media (max-width: 575.5px){
+    .section {
+        padding: 40px 0 !important;
+    }
+  
 }

@@ -7,7 +7,7 @@ const CardInfo: React.FC<CardInfo> = ({img_url, title, subTitle, href}) => {
   return (
     <>
       <div className="flex">
-        <div className="bg-info transition ease-in-out hover:-translate-y-1 hover:scale-110 py-4 px-6 rounded-md ">
+        <div className="bg-bgInfo hover:bg-bgTransparent bgBorder transition ease-in-out hover:-translate-y-1 hover:scale-110 py-4 px-6 rounded-md ">
           <div className="flex flex-row gap-4 justify-center">
             <Image width={50} src={img_url} alt="" />
             <div className="content-center grid ">

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./template.css"
 import "@fontsource/montserrat";
+import "@fontsource/montserrat/100.css";
+import "@fontsource/montserrat/200.css";
+import "@fontsource/montserrat/300.css";
 import "@fontsource/montserrat/400.css";
 import "@fontsource/montserrat/500.css";
 import "@fontsource/montserrat/600.css";
@@ -22,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bgColor container mx-auto px-4">
+      <body className="bg-bgColor mx-auto">
         <Navbar />
         {children}
       </body>
