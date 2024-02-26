@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-color container mx-auto px-4">
+      <body className="bgColor container mx-auto px-4">
         <Navbar />
         {children}
       </body>

@@ -4,6 +4,7 @@
 .bg-info {
     background: #1B2B43
 }
+
 .bg-info:hover {
     background: transparent;
     border: 1px solid #4DB5FF;
@@ -23,9 +24,7 @@
     font-size: 14px
 }
 .button-primary:hover {
-    background: transparent;
-    border: 1px solid #4DB5FF;
-    color: #4DB5FF;
+    background: #308ACB;
 }
 .button-primary-outline {
     background: transparent;
