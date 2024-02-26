@@ -1,0 +1,57 @@
+{
+  "frontEnd": [
+    {
+      "id": 1,
+      "name": "HTML & CSS",
+      "level": "Advance"
+    },
+    {
+      "id": 2,
+      "name": "React Js",
+      "level": "Intermediate"
+    },
+    {
+        "id": 3,
+        "name": "Vue Js",
+        "level": "Basic"
+    },
+    {
+        "id": 4,
+        "name": "Javascript",
+        "level": "Intermediate"
+    },
+    {
+        "id": 5,
+        "name": "Next Js",
+        "level": "Intermediate"
+    },
+    {
+        "id": 6,
+        "name": "Typescript",
+        "level": "Intermediate"
+    }
+  ],
+
+  "backEnd" : [
+    {
+      "id": 1,
+      "name": "Node Js",
+      "level": "Intermediate"
+    },
+     {
+      "id": 2,
+      "name": "Laravel",
+      "level": "Experience"
+    },
+     {
+      "id": 3,
+      "name": "Nest Js",
+      "level": "Experience"
+    },
+     {
+       "id": 4,
+       "name": "PHP",
+       "level": "Experience"
+     }
+  ]
+}
