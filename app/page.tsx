@@ -3,6 +3,7 @@ import Banner from './components/Banner/Banner';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Resume from './components/Resume/Resume';
+import Portofolio from './components/Portofolio/Portofolio';
 
 const Page = () => {
   return (
@@ -11,6 +12,7 @@ const Page = () => {
      <About/>
      <Experience /> 
      <Resume />
+     <Portofolio />
     </>
   )
 }
