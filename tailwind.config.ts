@@ -12,7 +12,7 @@ const config: Config = {
         DEFAULT: "15px",
       },
     },
-    screen: {
+    screens: {
       sm: "640px",
       md: "768px",
       lg: "960px",
@@ -25,10 +25,10 @@ const config: Config = {
         accent: "#f13024",
       },
       backgroundImage: {
-        explosion: "/bg-explosion.png",
-        circle: "/circle.png",
-        circleStart: "/circle-star.svg",
-        site: "/site-bg.svg",
+        explosion: "url(/bg-explosion.png)",
+        circle: "url(/circle.png)",
+        circleStart: "url(/circle-star.svg)",
+        site: "url(/site-bg.svg)",
       },
       animation: {
         "spin slow": "spin 6s linear infinite",

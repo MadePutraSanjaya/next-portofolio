@@ -1,5 +1,6 @@
 import React from 'react'
-import Home from './pages/home';
+import Home from './home/page.tsx';
+
 
 const Page = () => {
   return (
