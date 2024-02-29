@@ -2,7 +2,7 @@ import React from 'react'
 
 const Portofolio = () => {
   return (
-    <div className="section containt mx-auto">
+    <div className="section container mx-auto">
       Portofolio
     </div>
   )

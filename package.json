@@ -12,11 +12,17 @@
     "@fontsource/montserrat": "^5.0.16",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@next/font": "^14.1.0",
     "@splidejs/splide": "^4.1.4",
+    "framer-motion": "^11.0.6",
     "next": "14.1.0",
     "react": "^18",
+    "react-countup": "^6.5.0",
     "react-dom": "^18",
-    "swiper": "^11.0.6"
+    "react-tsparticles": "^2.12.2",
+    "swiper": "^11.0.6",
+    "tailwind-scrollbar": "^3.1.0",
+    "tsparticles": "^3.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",

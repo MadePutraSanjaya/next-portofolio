@@ -7,28 +7,38 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: "15px",
+      },
+    },
+    screen: {
+      sm: "640px",
+      md: "768px",
+      lg: "960px",
+      xl: "1200px",
+    },
     extend: {
       colors: {
-        primary: "#4DB5FF",
-        bgColor: "#101D30",
-        bgInfo: "#1B2B43",
-        bgTransparent: "transparent",
-        bgSection: "#1B2B43",
-        bgBorder: "#4DB5FF",
+        primary: "#131424",
+        secondary: "#393a47",
+        accent: "#f13024",
       },
-      spacing: {
-        section: "padding: 80px 0",
+      backgroundImage: {
+        explosion: "/bg-explosion.png",
+        circle: "/circle.png",
+        circleStart: "/circle-star.svg",
+        site: "/site-bg.svg",
       },
-      borderWidth: {
-        DEFAULT: "1px",
-        "0": "0",
-        "2": "2px",
-        "3": "3px",
-        "4": "4px",
-        "6": "6px",
+      animation: {
+        "spin slow": "spin 6s linear infinite",
+      },
+      fontFamily: {
+        poppins: [`var(--font-poppins)`, "sans-serif"],
+        sora: [`var(--font-sora)`, "sans-serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
 export default config;
