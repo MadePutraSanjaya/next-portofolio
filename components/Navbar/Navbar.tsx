@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navData } from "../../app/data/navData.js";
+import { navData } from "../data/navData.js";
 
 const Navbar = () => {
   const router = usePathname();
