@@ -2,14 +2,14 @@ import { FaHtml5, FaCss3Alt, FaReact, FaVuejs, FaNodeJs,FaLaravel, FaPhp,FaFigma
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript, SiNextdotjs, SiNestjs } from "react-icons/si";
 
-const aboutData = [
+export const aboutData = [
   {
         title: "skills",
         info: [
             {
                 title: "Front End Development",
                 icons: [
-                    <>
+                    <div className="flex gap-x-4">
                     <FaHtml5 />
                     <FaCss3Alt />
                     <FaReact />
@@ -17,26 +17,26 @@ const aboutData = [
                     <IoLogoJavascript />
                     <SiTypescript />
                     <SiNextdotjs />
-                    </>
+                    </div>
                 ]
             },
             {
                 title: "Back End Development",
                 icons : [
-                    <>
+                    <div className="flex gap-x-4">
                     <FaNodeJs />
                     <FaLaravel />
                     <FaPhp />
                     <SiNestjs />
-                    </>
+                    </div>
                 ]
             },
              {
                 title: "UI/UX Design",
                 icons : [
-                    <>
+                    <div className="flex gap-x-4">
                     <FaFigma />
-                    </>
+                    </div>
                 ]
             }
         ]
