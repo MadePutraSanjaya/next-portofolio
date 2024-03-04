@@ -116,13 +116,12 @@ const About = () => {
                   <div className="hidden md:flex">-</div>
                   {item.started && <div>{item.started}</div>}
                   <div className="flex gap-x-4">
-                    {item.icons?.map((icons, itemIndex) => {
-                      return (
-                        <div key={itemIndex} className="text-2xl text-white">
-                          {icons}
+                   
+                    {item.icons && (
+      <div key={itemIndex} className="text-2xl text-white">
+                          {item.icons}
                         </div>
-                      );
-                    })}
+)}
                   </div>
                 </div>
               );
