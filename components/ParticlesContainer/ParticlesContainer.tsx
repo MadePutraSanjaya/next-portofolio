@@ -1,10 +1,14 @@
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // loads tsparticles-slim
-//import { loadFull } from "tsparticles"; // loads tsparticles
+import Particles, { ParticlesProps } from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim"; 
+//import { loadFull } from "tsparticles"; 
 import { useCallback, useMemo } from "react";
 
-const ParticlesComponent = (props) => {
-  const options = useMemo(() => {
+interface ParticlesComponentProps extends ParticlesProps {
+  id: string;
+}
+
+const ParticlesComponent: React.FC<ParticlesComponentProps> = (props: any) => {
+  const options: any = useMemo(() => {
     return {
       fullScreen: { enable: false },
       background: {
@@ -80,12 +84,18 @@ const ParticlesComponent = (props) => {
     };
   }, []);
 
-
-  const particlesInit = useCallback((engine) => {
-    loadSlim(engine);
-  }, []);
-
-  return <Particles id={props.id} init={particlesInit} options={options} className="w-full h-full absolute translate-z-0" />;
+const particlesInit = useCallback((engine: any) => {
+  loadSlim(engine);
+  return Promise.resolve();
+}, []);
+  return (
+    <Particles
+      id={props.id}
+      init={particlesInit}
+      options={options}
+      className="w-full h-full absolute translate-z-0"
+    />
+  );
 };
 
 export default ParticlesComponent;

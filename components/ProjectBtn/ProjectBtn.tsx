@@ -14,7 +14,7 @@ const ProjectBtn = () => {
           alt="image rounded"
           className="animate-spin-slow w-full h-full max-w-[141px] max-h-[148px]"
         />
-        <ArrowRightIcon class="h-6 w-6 absolute text-4xl group-hover:translate-x-2 transition-all duration-600" />
+        <ArrowRightIcon className="h-6 w-6 absolute text-4xl group-hover:translate-x-2 transition-all duration-600" />
 
       </Link>
     </div>

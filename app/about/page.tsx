@@ -84,10 +84,13 @@ const About = () => {
           </motion.div>
         </div>
 
-       <motion.div  variants={fadeIn("right", 0.4)}
-        initial="hidden"
-        animate="show"
-        exit="hidden" className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+        <motion.div
+          variants={fadeIn("right", 0.4)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+        >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
@@ -114,14 +117,14 @@ const About = () => {
                 >
                   <div className="font-light mb-2 md:mb-0"> {item.title}</div>
                   <div className="hidden md:flex">-</div>
-                  {item.started && <div>{item.started}</div>}
+                  {"started" in item && <div>{(item as any).started}</div>}
+
                   <div className="flex gap-x-4">
-                   
-                    {item.icons && (
-      <div key={itemIndex} className="text-2xl text-white">
-                          {item.icons}
-                        </div>
-)}
+                    {"icons" in item && (
+                      <div key={itemIndex} className="text-2xl text-white">
+                        {(item as any).icons}
+                      </div>
+                    )}
                   </div>
                 </div>
               );
