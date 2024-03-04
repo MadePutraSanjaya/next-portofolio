@@ -114,14 +114,16 @@ const About = () => {
                 >
                   <div className="font-light mb-2 md:mb-0"> {item.title}</div>
                   <div className="hidden md:flex">-</div>
-                  <div>{item.started}</div>
+                  {item.started && <div>{item.started}</div>}
                   <div className="flex gap-x-4">
                     {item.icons?.map((icons, itemIndex) => {
-                      return <div key={itemIndex} className="text-2xl text-white">{icons}</div>;
+                      return (
+                        <div key={itemIndex} className="text-2xl text-white">
+                          {icons}
+                        </div>
+                      );
                     })}
                   </div>
-                  
-                  
                 </div>
               );
             })}
