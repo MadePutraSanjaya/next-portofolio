@@ -5,8 +5,11 @@ import Circles from "../../components/Circles/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variant";
 import { aboutData } from "./../../components/data/about";
-
 import CountUp from "react-countup";
+import Image from "next/image"
+import Link from "next/link"
+import { FaArrowTrendUp } from "react-icons/fa6";
+
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
@@ -58,7 +61,7 @@ const About = () => {
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={3} duration={5} />
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                <div className="font-bold text-white/70 text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experiences
                 </div>
               </div>
@@ -67,7 +70,7 @@ const About = () => {
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={20} duration={5} />+
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                <div className="font-bold text-white/70 text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   SATISFIED CLIENTS
                 </div>
               </div>
@@ -76,7 +79,7 @@ const About = () => {
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={30} duration={5} />+
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                <div className="font-bold text-white/70 text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   FINISHED PROJECTS
                 </div>
               </div>
@@ -110,25 +113,89 @@ const About = () => {
 
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
-                >
-                  <div className="font-light mb-2 md:mb-0"> {item.title}</div>
-                  <div className="hidden md:flex">-</div>
-                  {"started" in item && <div>{(item as any).started}</div>}
+    return (
+      <div
+        key={itemIndex}
+        className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+      >
+        {/* skills */}
+        {item.title && (
+          <>
+            <div className="font-light mb-2 md:mb-0">{item.title}</div>
+            <div className="hidden md:flex">-</div>
+            <div className="flex gap-x-4">
+              {"icons" in item && (
+                <div key={itemIndex} className="text-2xl text-white">
+                  {(item as any).icons}
+                </div>
+              )}
+            </div>
+          </>
+        )}
 
-                  <div className="flex gap-x-4">
-                    {"icons" in item && (
-                      <div key={itemIndex} className="text-2xl text-white">
-                        {(item as any).icons}
-                      </div>
-                    )}
+        {/* experience */}
+        {item.name && (
+          <>
+            <div className="grid grid-cols-2 gap-x-20 border-b border-gray-400 justify-center max-w-[75%] xl:max-w-[90%] md:max-w-[50%] xl:mx-0 mx-auto">
+              <div className="flex my-4 gap-4">
+                <Image
+                  src={item.img_url}
+                  alt={item.name}
+                  width={50}
+                  height={50}
+                  className="mb-4"
+                />
+                <div className="grid justify-center items-center h-full">
+                  <div className="flex justify-between gap-16 w-[26rem] h-full">
+                    <p className="font-bold text-white">{item.name}</p>
+                    <Link href={item.link} target="_blank">
+                      <FaArrowTrendUp class="h-4 w-4 text-gray-500" />
+                    </Link>
+                  </div>
+                  <div className="flex justify-between gap-16 w-[26rem] h-full">
+                    <p className="text-gray-400 text-xs">{item.position}</p>
+                    <p className="text-gray-400 text-xs">{item.started}</p>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* educations */}
+        {item.school && (
+          <>
+           <div className="border-b border-gray-400">
+            <div className="flex gap-4 my-4">
+              <div className="grid items-center h-full xl:w-[36rem] w-[30rem]">
+                 <p className="text-white font-bold">{item.school}</p>
+                    <p className="text-gray-400 text-md font-semibold">{item.years}</p>
+                    <p className="text-gray-400 text-md font-normal">{item.section}</p>
+              </div>
+            </div>
+
+           </div>
+          </>
+        )}
+
+
+        {/* organization */}
+        {item.period_organization && (
+          <>
+         <ul class="xl:list-disc list-none mx-2">
+            <li className="text-white font-semibold xl:mt-0 mt-4">{item.period_organization}</li>
+
+          <ol className="xl:list-decimal list-none list-inside ">
+        {item.info.map((infoItem, infoIndex) => (
+          <li key={infoIndex} >{infoItem}</li>
+        ))}
+      </ol>
+        </ul>
+          </>
+        )}
+      </div>
+    );
+          })}
           </div>
         </motion.div>
       </div>

@@ -1,18 +1,16 @@
-import {
-  HomeIcon,
-  UserIcon,
-  BriefcaseIcon,
-  EnvelopeIcon,
-} from "@heroicons/react/24/outline";
+import { HiHome, HiUserCircle} from "react-icons/hi";
+import { IoCloudDone } from "react-icons/io5";
+import { HiEnvelope } from "react-icons/hi2";
+
 
 export const navData = [
-  { name: "home", path: "/", icon: <HomeIcon className="h-5 w-5" /> },
-  { name: "about", path: "/about", icon: <UserIcon className="h-5 w-5" /> },
-  // { name: "services", path: "/services", icon: <HiRectangleGroup className="h-5 w-5" /> },
-  { name: "work", path: "/work", icon: <BriefcaseIcon className="h-5 w-5" /> },
+  { name: "home", path: "/", icon: <HiHome /> },
+  { name: "about", path: "/about", icon: <HiUserCircle /> },
+  // { name: "services", path: "/services", icon: <HiRectangleGroup /> },
+  { name: "work", path: "/work", icon: <IoCloudDone /> },
   {
     name: "contact",
     path: "/contact",
-    icon: <EnvelopeIcon className="h-5 w-5" />,
+    icon: <HiEnvelope />,
   },
 ];
