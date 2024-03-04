@@ -41,7 +41,7 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            I'm just happy to see how the code I have made turns into the look I
+            I’m just happy to see how the code I have made turns into the look I
             want, it to be a matter of pride for me. I have curiosity and keep
             learn about technology and I hope to be a great front end developer
             in future.
@@ -84,7 +84,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        <motion.div  variants={fadeIn("right", 0.4)}
+       <motion.div  variants={fadeIn("right", 0.4)}
         initial="hidden"
         animate="show"
         exit="hidden" className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
@@ -116,10 +116,12 @@ const About = () => {
                   <div className="hidden md:flex">-</div>
                   <div>{item.started}</div>
                   <div className="flex gap-x-4">
-                    {item.icons?.map((icons, itmeIndex) => {
-                      return <div className="text-2xl text-white">{icons}</div>;
+                    {item.icons?.map((icons, itemIndex) => {
+                      return <div key={itemIndex} className="text-2xl text-white">{icons}</div>;
                     })}
                   </div>
+                  
+                  
                 </div>
               );
             })}
