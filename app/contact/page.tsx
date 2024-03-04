@@ -79,7 +79,7 @@ const Contact = () => {
                 ref={emailRef}
                 type="text"
                 required
-                placeholder="example@gmail.com"
+                placeholder="Email"
               />
             </div>
             <input
