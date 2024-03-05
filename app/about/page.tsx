@@ -4,7 +4,7 @@ import SideProfile from "../../components/ProfileSide/ProfileSide";
 import Circles from "../../components/Circles/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variant";
-import { aboutData } from "./../../components/data/about";
+import { aboutData } from "../../data/about";
 import CountUp from "react-countup";
 import Image from "next/image";
 import Link from "next/link";
