@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`page bg-site h-[100%] overflow-y-scroll xl:overflow-y-hidden md:overflow-y-scroll text-white bg-cover bg-[50% 50%] w-[100%] bg-no-repeat ${sora.variable} font-sora relative`}>
+      <body className={`page bg-site overflow-y-scroll xl:overflow-y-hidden md:overflow-y-scroll text-white bg-cover bg-[50% 50%] w-[100%] bg-no-repeat ${sora.variable} font-sora relative`}>
         {/* <Transition /> */}
         <TopLeftImage />
         <Navbar />
