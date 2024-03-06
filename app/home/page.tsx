@@ -29,7 +29,7 @@ const Home = () => {
                   "Web Design",
                   "Software Engineer",
                 ]}
-                typeSpeed={100}
+                typeSpeed={50}
                 loop
                 backSpeed={20}
                 showCursor={true}

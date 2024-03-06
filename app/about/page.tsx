@@ -13,7 +13,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full overflow-x-hidden bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-screen overflow-x-hidden bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
 
       <motion.div
@@ -34,8 +34,7 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs code.
+          Crafting awesome designs from ordinary <span className="text-accent">code.</span> 
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -44,10 +43,7 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            I’m just happy to see how the code I have made turns into the look I
-            want, it to be a matter of pride for me. I have curiosity and keep
-            learn about technology and I hope to be a great front end developer
-            in future.
+           Watching my code morph into the perfect design brings me joy and pride. With a relentless curiosity for technology, I’m on a quest to become a awesome front-end developer.
           </motion.p>
           <motion.div
             variants={fadeIn("right", 0.6)}
