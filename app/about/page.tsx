@@ -13,7 +13,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full overflow-x-hidden bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
 
       <motion.div
@@ -121,11 +121,11 @@ const About = () => {
                   {/* skills */}
                   {"title" in item && item.title !== null && (
                     <>
-                      <div className="font-light mb-2 md:mb-0">
+                      <div className="font-light mb-2 md:mb-0 ">
                         {item.title}
                       </div>
                       <div className="hidden md:flex">-</div>
-                      <div className="flex gap-x-4">
+                      <div className="flex gap-x-4 mb-6 xl:mb-0">
                         {"icons" in item && (
                           <div key={itemIndex} className="text-2xl text-white">
                             {(item as any).icons}
@@ -138,25 +138,25 @@ const About = () => {
                   {/* experience */}
                   {"name" in item && item.name !== null && (
                     <>
-                      <div className="grid grid-cols-2 gap-x-20 border-b border-gray-400 justify-center max-w-[75%] xl:max-w-[90%] md:max-w-[50%] xl:mx-0 mx-auto">
-                        <div className="flex my-4 gap-4">
+                      <div className="flex gap-x-20 border-b border-gray-400 justify-center xl:mx-0 mx-auto">
+                        <div className="flex my-4 gap-4 items-center">
                           <Image
                             src={item.img_url}
                             alt={item.name}
                             width={50}
                             height={50}
-                            className="mb-4"
+                            className="mb-4 w-fit h-fit hidden md:block"
                           />
                           <div className="grid justify-center items-center h-full">
-                            <div className="flex justify-between gap-16 w-[26rem] h-full">
-                              <p className="font-bold text-white">
+                            <div className="flex justify-between gap-[10rem] xl:w-[26rem] md:w-[26rem] h-full">
+                              <p className="text-left font-bold text-white text-md">
                                 {item.name}
                               </p>
                               <Link href={item.link} target="_blank">
                                 <FaArrowTrendUp className="h-4 w-4 text-gray-500" />
                               </Link>
                             </div>
-                            <div className="flex justify-between gap-16 w-[26rem] h-full">
+                            <div className="flex justify-between xl:gap-16 gap-8 xl:w-[26rem] md:w-[26rem] h-full">
                               <p className="text-gray-400 text-xs">
                                 {item.position}
                               </p>
@@ -175,7 +175,7 @@ const About = () => {
                     <>
                       <div className="border-b border-gray-400">
                         <div className="flex gap-4 my-4">
-                          <div className="grid items-center h-full xl:w-[36rem] w-[30rem]">
+                          <div className="grid items-center h-full xl:w-[36rem] md:w-[26rem] w-[24rem]">
                             <p className="text-white font-bold">
                               {item.school}
                             </p>
