@@ -1,49 +1,49 @@
 "use client";
 
-import React, {useEffect, useRef, FormEvent, useState} from 'react'
-import { motion } from "framer-motion"
-import { fadeIn } from "../../variant"
+import React, { useEffect, useRef, FormEvent, useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variant";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import "sweetalert2/src/sweetalert2.scss";
 
 const Contact = () => {
- const form = useRef<HTMLFormElement | null>(null);
- const [loading, setLoading] = useState(false);
+  const form = useRef<HTMLFormElement | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
   const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string;
 
- const handleSubmit = async (e: any) => {
-      e.preventDefault();
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
 
-  try {
-    setLoading(true);
-    const currentForm = form.current;
-    if (currentForm) {
-      await emailjs.sendForm(serviceId, templateId, currentForm, userId);
-    } else {
+    try {
+      setLoading(true);
+      const currentForm = form.current;
+      if (currentForm) {
+        await emailjs.sendForm(serviceId, templateId, currentForm, userId);
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "The form is empty, try fill it out first",
+        });
+      }
+
       Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "The form is empty, try fill it out first",
+        title: "Your email has been sent!",
+        text: "Wait for the response, OK!",
+        icon: "success",
       });
+      form.current?.reset();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
     }
-
-   Swal.fire({
-       title: "Your email has been sent!",
-       text: "Wait for the response, OK!",
-       icon: "success",
-     });
-    form.current?.reset();
-  } catch (error) {
-    console.log(error);
-  } finally {
-    setLoading(false);
-  }
-}
+  };
 
   return (
     <div className="h-screen bg-primary/30">
@@ -61,10 +61,10 @@ const Contact = () => {
           <motion.form
             ref={form}
             onSubmit={handleSubmit}
-             variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              animate="show"
-              exit="hidden"
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
             className="flex-1 flex flex-col gap-6 w-full mx-auto"
           >
             <div className="flex gap-x-6 w-full">
@@ -72,7 +72,7 @@ const Contact = () => {
                 className="input capitalize"
                 type="text"
                 required
-                id="" 
+                id=""
                 name="name"
                 placeholder="Name"
               />
@@ -80,7 +80,7 @@ const Contact = () => {
                 className="input"
                 type="text"
                 required
-                id="" 
+                id=""
                 name="recipient"
                 placeholder="Email"
               />
@@ -89,7 +89,7 @@ const Contact = () => {
               className="input capitalize"
               type="text"
               required
-              id="" 
+              id=""
               name="subject"
               placeholder="Subject"
             />
@@ -98,7 +98,7 @@ const Contact = () => {
               className="textarea"
               placeholder="Message"
               required
-              id="" 
+              id=""
               name="message"
             ></textarea>
             <button className="btn rounded-full bg-accent max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden group">
@@ -112,6 +112,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Contact
+export default Contact;
