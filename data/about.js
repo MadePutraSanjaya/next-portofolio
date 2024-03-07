@@ -93,7 +93,13 @@ export const aboutData = [
         section: "Software Engineer",
       },
       {
-        school: "INSTITUT BISNIS DAN TEKNOLOGI INDONESIA",
+        school: (
+          <>
+          <span>  INSTITUT BISNIS DAN <br />TEKNOLOGI INDONESIA</span>
+        
+
+          </>
+        ),
         years: "2023 - 2027",
         section: "Bachelor of Computer Science",
       },

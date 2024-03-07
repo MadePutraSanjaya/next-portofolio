@@ -13,7 +13,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-screen overflow-x-hidden bg-primary/30 py-32 text-center xl:text-left">
+    <div className="xl:h-screen h-full overflow-x-hidden bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
 
       <motion.div
@@ -90,7 +90,7 @@ const About = () => {
           exit="hidden"
           className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-2 overflow-x-scroll w-96 xl:overflow-hidden md:w-auto pb-4 xl:pb-auto xl:w-max">
+          <div className="flex gap-x-9 xl:gap-x-8 mx-auto xl:mx-0 mb-2 overflow-x-scroll w-96 xl:overflow-hidden md:w-auto pb-4 xl:pb-auto xl:w-max">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -145,9 +145,11 @@ const About = () => {
                           />
                           <div className="grid justify-center items-center h-full">
                             <div className="flex justify-between gap-[10rem] xl:w-[26rem] md:w-[26rem] h-full">
+                              <Link href={item.link} target="_blank">
                               <p className="text-left font-bold text-white text-md">
                                 {item.name}
                               </p>
+                              </Link>
                               <Link href={item.link} target="_blank">
                                 <FaArrowTrendUp className="h-4 w-4 text-gray-500" />
                               </Link>
