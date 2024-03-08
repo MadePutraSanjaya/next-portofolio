@@ -15,7 +15,7 @@ const Contact = () => {
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
   const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string;
-
+ 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
