@@ -11,10 +11,10 @@ import "sweetalert2/src/sweetalert2.scss";
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [loading, setLoading] = useState(false);
-  
-  const serviceId = "service_v2b23a6";
-  const templateId = "template_b8muu1m";
-  const userId = "qpqpeuf4fPIXLul0U";
+
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
+  const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string;
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
